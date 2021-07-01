@@ -42,7 +42,7 @@ namespace Console_Calculator
                     continue;
                 }
 
-                switch (c.ToString())
+                switch (c)
                 {
                     case "(":
                         tokens.Add(new Token(c, TokenType.OpenBrace));
