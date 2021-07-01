@@ -26,6 +26,14 @@ namespace Console_Calculator.Test
         [TestCase("2,2+2.2", 4.4)]
         [TestCase("1 -   1", 0)]
         [TestCase("-(3+4)", -7)]
+        [TestCase("-(-3+4)", -1)]
+        [TestCase("-(3-4)", 1)]
+        [TestCase("-(4-3)", -1)]
+        [TestCase("-(4-4)", 0)]
+        [TestCase("-1*(3+4)", -7)]
+        [TestCase("-1*(3-4)", 1)]
+        [TestCase("-1*(4-4)", -0)]
+        [TestCase("-2*(4-3)", -2)]
         public void CorrectExpression_Tests(string expression, decimal expected)
         {
             Calculator calc = new Calculator(expression);
