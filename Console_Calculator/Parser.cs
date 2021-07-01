@@ -59,7 +59,7 @@ namespace Console_Calculator
 
                     case "-":
                         if (tokens.LastOrDefault()?.Type == TokenType.Operator) break;
-                        if (tokens.LastOrDefault() is null || tokens.LastOrDefault()?.Type == TokenType.OpenBrace)
+                        if (tokens.LastOrDefault() is null && !array[i + 1].Equals('(') || tokens.LastOrDefault()?.Type == TokenType.OpenBrace)
                         {
                             negativeDigit = true;
                             break;
